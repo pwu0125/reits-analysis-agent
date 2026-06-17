@@ -11,10 +11,16 @@ setup(
     version="3.0.0",
     description="中国基础设施公募REITs多智能体分析系统",
     author="pyemini",
-    packages=find_packages(include=["*"], exclude=["mcp_servers.*", "finetune.*", "docker.*"]),
+    package_dir={"knowledge_retrieval": "."},
+    packages=["knowledge_retrieval"] + [
+        "knowledge_retrieval." + p for p in find_packages(
+            include=["*"],
+            exclude=["mcp_servers*", "docker*", "mp4", "finetune*", "utils"]
+        )
+    ],
     python_requires=">=3.10",
     install_requires=[
-        "openai-agents>=1.0.0",
+        "openai-agents>=0.8.0",
         "openai>=1.0.0",
         "pymysql>=1.0.0",
         "pandas>=2.0.0",
