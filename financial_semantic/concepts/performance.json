@@ -1,0 +1,80 @@
+[
+  {
+    "id": "roa",
+    "name_zh": "总资产收益率 (ROA)",
+    "name_en": "Return on Assets",
+    "category": "performance",
+    "synonyms": [
+      "ROA",
+      "资产回报率",
+      "总资产回报率"
+    ],
+    "unit": "%",
+    "expression": {
+      "type": "division",
+      "numerator": {
+        "type": "ref",
+        "name": "net_profit"
+      },
+      "denominator": {
+        "type": "ref",
+        "name": "total_assets"
+      }
+    },
+    "version": 1,
+    "created_at": "2026-06-18T18:14:19",
+    "updated_at": "2026-06-18T18:14:19"
+  },
+  {
+    "id": "net_margin",
+    "name_zh": "净利润率",
+    "name_en": "Net Profit Margin",
+    "category": "performance",
+    "synonyms": [
+      "利润率",
+      "净利率",
+      "净利润占比"
+    ],
+    "unit": "%",
+    "expression": {
+      "type": "division",
+      "numerator": {
+        "type": "ref",
+        "name": "net_profit"
+      },
+      "denominator": {
+        "type": "ref",
+        "name": "revenue"
+      }
+    },
+    "version": 1,
+    "created_at": "2026-06-18T18:14:19",
+    "updated_at": "2026-06-18T18:14:19"
+  },
+  {
+    "id": "cfo_revenue_ratio",
+    "name_zh": "经营性现金流/营收比",
+    "name_en": "CFO-to-Revenue Ratio",
+    "category": "performance",
+    "synonyms": [
+      "CFO占比",
+      "现金流营收比",
+      "经营现金流比率"
+    ],
+    "unit": "%",
+    "expression": {
+      "type": "division",
+      "numerator": {
+        "type": "ref",
+        "name": "operating_cash_flow"
+      },
+      "denominator": {
+        "type": "ref",
+        "name": "revenue"
+      }
+    },
+    "version": 1,
+    "created_at": "2026-06-18T18:14:19",
+    "updated_at": "2026-06-18T18:14:19"
+  }
+]
